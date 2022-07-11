@@ -20,7 +20,16 @@ This project requires an NVIDIA GPU, and assumes you have your GPU drivers and t
 git submodule update --init --recursive
 ```
 
-1. Build CUTLASS
+2. Download CUTLASS
+```shell
+$ git clone github.com/NVIDIA/cutlass
+$ export CUDACXX=/usr/local/cuda-11.3/bin/nvcc
+$ mkdir build && cd build
+$ cmake .. -DCUTLASS_NVCC_ARCHS=75 -DCMAKE_CUDA_COMPILER=$CUDACXX
+$ cmake .. -DCUTLASS_NVCC_ARCHS=75 -DCUTLASS_ENABLE_TESTS=OFF -DCUTLASS_UNITY_BUILD_ENABLED=ON
+```
+
+3. Build CUTLASS
 
 ```
 cd ext/cutlass
@@ -59,6 +68,7 @@ python download_{mnist, cifar10}.py
 
 ```
 make -j8 PIRANHA_FLAGS="-DFLOAT_PRECISION=<NBITS> -D{TWOPC,FOURPC}"
+make -j8 PIRANHA_FLAGS="-DFLOAT_PRECISION=20"
 ```
 
 ## Run

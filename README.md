@@ -23,9 +23,11 @@ git submodule update --init --recursive
 2. Download CUTLASS
 ```shell
 $ git clone github.com/NVIDIA/cutlass
-$ export CUDACXX=/usr/local/cuda-11.3/bin/nvcc
+$ export CUDACXX=/usr/local/cuda-11.6/bin/nvcc
 $ mkdir build && cd build
-$ cmake .. -DCUTLASS_NVCC_ARCHS=75 -DCMAKE_CUDA_COMPILER=$CUDACXX
+# 75: T4, 80: A100
+sudo cmake .. -DCUTLASS_NVCC_ARCHS=80 -DCMAKE_CUDA_COMPILER_WORKS=1 -DCMAKE_CUDA_COMPILER=$CUDACXX
+$ cmake .. -DCUTLASS_NVCC_ARCHS=80 -DCMAKE_CUDA_COMPILER=$CUDACXX
 $ cmake .. -DCUTLASS_NVCC_ARCHS=75 -DCUTLASS_ENABLE_TESTS=OFF -DCUTLASS_UNITY_BUILD_ENABLED=ON
 ```
 
@@ -68,7 +70,7 @@ python download_{mnist, cifar10}.py
 
 ```
 make -j8 PIRANHA_FLAGS="-DFLOAT_PRECISION=<NBITS> -D{TWOPC,FOURPC}"
-make -j8 PIRANHA_FLAGS="-DFLOAT_PRECISION=20"
+make -j8 PIRANHA_FLAGS="-DFLOAT_PRECISION=20 -DTWOPC"
 ```
 
 ## Run

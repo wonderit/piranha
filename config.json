@@ -1,9 +1,9 @@
 {
     "_desc_num_parties": "Number of parties involved in the MPC computation. Should match compiled application protocol.",
-    "num_parties": 3,
+    "num_parties": 2,
 
     "_desc_party_ips": "IP addresses of each party, ordered by party number",
-    "party_ips": [],
+    "party_ips": ["127.0.0.1", "127.0.0.1"],
 
     "_desc_party_users": "Usernames for each party, ordered by party number. Can be used by scripts to SSH into machines if necessary to start piranha processes",
     "party_users": [],
@@ -36,10 +36,10 @@
     "custom_epoch_count": 10,
 
     "_desc_custom_iterations": "Enable custom number of iterations. Otherwise set by training dataset size.",
-    "custom_iterations": false,
+    "custom_iterations": true,
 
     "_desc_custom_iteration_count": "Number of iterators to train per epoch, if custom_iterations is set",
-    "custom_iteration_count": 0,
+    "custom_iteration_count": 50,
 
     "_desc_custom_batch_size": "Enable custom batch size. Otherwise set by architecture configuration.",
     "custom_batch_size": true,

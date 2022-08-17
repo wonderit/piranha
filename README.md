@@ -9,6 +9,12 @@ Piranha is a C++-based platform for accelerating secure multi-party computation 
 
 Piranha is described in more detail in our [USENIX Security '22 paper](https://eprint.iacr.org/2022/892)! If you have questions, please create git issues; for eventual replies, you can also reach out to `jlw@berkeley.edu`.
 
+<p align="center">
+    <img src="https://github.com/ucbrise/piranha/blob/main/files/images/usenixbadges-available.png?raw=true" alt="usenix-available" width=10% height=10%/>
+    <img src="https://github.com/ucbrise/piranha/blob/main/files/images/usenixbadges-functional.png?raw=true" alt="usenix-functional" width=10% height=10%/>
+    <img src="https://github.com/ucbrise/piranha/blob/main/files/images/usenixbadges-reproduced.png?raw=true" alt="usenix-reproduced" width=10% height=10%/>
+</p>
+
 **Warning**: This is an academic proof-of-concept prototype and has not received careful code review. This implementation is NOT ready for production use.
 
 ## Build
@@ -89,11 +95,16 @@ You can cite the paper using the following BibTeX entry (the paper links to this
 
 ```
 @inproceedings {watson22piranha,
+    author = {Watson, Jean-Luc and Wagh, Sameer and Popa, Raluca Ada},
     title = {Piranha: A {GPU} Platform for Secure Computation},
     booktitle = {31st USENIX Security Symposium (USENIX Security 22)},
     year = {2022},
+    isbn = {978-1-939133-31-1},
+    address = {Boston, MA},
+    pages = {827--844},
     url = {https://www.usenix.org/conference/usenixsecurity22/presentation/watson},
-    publisher = {USENIX Association}
+    publisher = {USENIX Association},
+    month = aug,
 }
 ```
 

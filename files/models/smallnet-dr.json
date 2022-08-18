@@ -1,0 +1,68 @@
+{
+    "name": "SmallNet",
+    "dataset": "DR",
+    "batch_size": 128,
+    "input_size": 16384,
+    "num_classes": 5,
+    "model": [
+        {
+            "layer": "cnn",
+            "input_hw": [128, 128],
+            "in_channels": 3,
+            "out_channels": 16,
+            "filter_hw": [3, 3],
+            "stride": 1,
+            "padding": 0
+        },
+        {
+            "layer": "maxpool",
+            "input_hw": [24, 24],
+            "in_channels": 16,
+            "pool_hw": [2, 2],
+            "stride": 2
+        },
+        {
+            "layer": "relu",
+            "input_dim": 2304
+        },
+        {
+            "layer": "cnn",
+            "input_hw": [12, 12],
+            "in_channels": 16,
+            "out_channels": 16,
+            "filter_hw": [5, 5],
+            "stride": 1,
+            "padding": 0
+        },
+        {
+            "layer": "maxpool",
+            "input_hw": [8, 8],
+            "in_channels": 16,
+            "pool_hw": [2, 2],
+            "stride": 2
+        },
+        {
+            "layer": "relu",
+            "input_dim": 256
+        },
+        {
+            "layer": "fc",
+            "input_dim": 256,
+            "output_dim": 100
+        },
+        {
+            "layer": "relu",
+            "input_dim": 100
+        },
+        {
+            "layer": "fc",
+            "input_dim": 100,
+            "output_dim": 10 
+        },
+        {
+            "layer": "relu",
+            "input_dim": 10
+        }
+    ] 
+}
+

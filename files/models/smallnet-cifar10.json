@@ -7,7 +7,7 @@
     "model": [
         {
             "layer": "cnn",
-            "input_hw": [128, 128],
+            "input_hw": [32, 32],
             "in_channels": 3,
             "out_channels": 16,
             "filter_hw": [5, 5],
@@ -16,7 +16,7 @@
         },
         {
             "layer": "maxpool",
-            "input_hw": [124, 124],
+            "input_hw": [28, 28],
             "in_channels": 16,
             "pool_hw": [2, 2],
             "stride": 2
@@ -27,7 +27,7 @@
         },
         {
             "layer": "cnn",
-            "input_hw": [62, 62],
+            "input_hw": [14, 14],
             "in_channels": 16,
             "out_channels": 16,
             "filter_hw": [5, 5],
@@ -36,7 +36,7 @@
         },
         {
             "layer": "maxpool",
-            "input_hw": [58, 58],
+            "input_hw": [12, 12],
             "in_channels": 16,
             "pool_hw": [2, 2],
             "stride": 2

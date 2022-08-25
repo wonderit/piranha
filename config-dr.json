@@ -15,7 +15,7 @@
     "unit_test_only": false,
 
     "_desc_debug_print": "Show debug output",
-    "debug_print": true,
+    "debug_print": false,
 
     "_desc_debug_overflow": "Test for overflow and print related debug output. Breaks security by revealing intermediary values.",
     "debug_overflow": false,
@@ -27,25 +27,25 @@
     "run_name": "hello_world_run",
 
     "_desc_network": "Path to NN architecture to use for the run",
-    "network": "files/models/smallnet-cifar10.json",
+    "network": "files/models/secureml-dr.json",
 
     "_desc_custom_epochs": "Enable custom number of epochs. Otherwise set by size of learning rate schedule",
-    "custom_epochs": false,
+    "custom_epochs": true,
 
     "_desc_custom_epoch_count": "Number of epochs to train for, if custom_epochs is set",
     "custom_epoch_count": 10,
 
     "_desc_custom_iterations": "Enable custom number of iterations. Otherwise set by training dataset size.",
-    "custom_iterations": true,
+    "custom_iterations": false,
 
     "_desc_custom_iteration_count": "Number of iterators to train per epoch, if custom_iterations is set",
-    "custom_iteration_count": 50,
+    "custom_iteration_count": 10,
 
     "_desc_custom_batch_size": "Enable custom batch size. Otherwise set by architecture configuration.",
-    "custom_batch_size": true,
+    "custom_batch_size": false,
 
     "_desc_custom_batch_size_count": "Desired custom batch size",
-    "custom_batch_size_count": 128,
+    "custom_batch_size_count": 32,
 
     "_desc_nn_seed": "Seed for NN initialization",
     "nn_seed": 343934585,
@@ -84,19 +84,19 @@
     "eval_accuracy": true,
 
     "_desc_eval_inference_stats": "Evaluation: print runtime and communication statistics for each inference forward pass",
-    "eval_inference_stats": true,
+    "eval_inference_stats": false,
 
     "_desc_eval_train_stats": "Evaluation: print runtime and communication statistics for each training forward-backward pass",
-    "eval_train_stats": true,
+    "eval_train_stats": false,
 
     "_desc_eval_fw_peak_memory": "Evaluation: print peak memory usage during each forward pass",
-    "eval_fw_peak_memory": true,
+    "eval_fw_peak_memory": false,
 
     "_desc_eval_bw_peak_memory": "Evaluation: print peak memory usage during each backward pass",
-    "eval_bw_peak_memory": true,
+    "eval_bw_peak_memory": false,
     
     "_desc_eval_epoch_stats": "Evaluation: print cumulative runtime and communication statistics for each training epoch",
-    "eval_epoch_stats": true,
+    "eval_epoch_stats": false,
 
     "_desc_print_activations": "Print output activations for each layer every forward pass",
     "print_activations": false,

@@ -43,8 +43,8 @@ size_t db_bytes = 0;
 size_t db_layer_max_bytes = 0;
 size_t db_max_bytes = 0;
 
-size_t train_dataset_size = 60000;
-size_t test_dataset_size = 10000;
+size_t train_dataset_size = 4050;
+size_t test_dataset_size = 450;
 int log_learning_rate = 5;
 size_t INPUT_SIZE;
 size_t NUM_CLASSES;

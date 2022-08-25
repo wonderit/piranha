@@ -1,0 +1,37 @@
+{
+    "name": "SecureML",
+    "dataset": "DR",
+    "batch_size": 128,
+    "input_size": 3072,
+    "num_classes": 5,
+    "model": [
+        {
+            "layer": "fc",
+            "input_dim": 3072,
+            "output_dim": 128 
+        },
+        {
+            "layer": "relu",
+            "input_dim": 128
+        },
+        {
+            "layer": "fc",
+            "input_dim": 128,
+            "output_dim": 128 
+        },
+        {
+            "layer": "relu",
+            "input_dim": 128
+        },
+        {
+            "layer": "fc",
+            "input_dim": 128,
+            "output_dim": 5
+        },
+        {
+            "layer": "relu",
+            "input_dim": 5
+        }
+    ] 
+}
+

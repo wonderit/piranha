@@ -26,6 +26,8 @@ np.random.seed(0)
 
 # In[2]:
 
+img_width = 32
+
 def get_dataset(loader):
   images, labels = [], []
   for img, label in loader:
@@ -39,7 +41,7 @@ def save_to_file(tensor, filename):
     
 
 def one_hot(labels):
-    one_hot_labels = np.zeros((labels.size, 10))
+    one_hot_labels = np.zeros((labels.size, 5))
     one_hot_labels[np.arange(labels.size),labels] = 1
     return one_hot_labels
 
@@ -77,12 +79,12 @@ print(dataset15['diagnosis'].value_counts())
 images = []
 for i, image_id in enumerate(tqdm(dataset19.id_code)):
     im = cv2.imread(f'../files/DR/resized train 19/{image_id}.jpg')
-    im = cv2.resize(im, (128, 128))
+    im = cv2.resize(im, (img_width, img_width))
     images.append(im)
 
 for i, image_id in enumerate(tqdm(dataset15.id_code)):
     im = cv2.imread(f'../files/DR/resized train 15/{image_id}.jpg')
-    im = cv2.resize(im, (128, 128))
+    im = cv2.resize(im, (img_width, img_width))
     images.append(im)
 
 # APPLYING GAUSSIAN BLUR NOISE FILTER
@@ -92,7 +94,7 @@ def load_colorfilter(image, sigmaX=10):
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     # image = crop_image_from_gray(image)
     # image = cv2.resize(image, (IMG_SIZE, IMG_SIZE))
-    image = cv2.addWeighted(image, 4, cv2.GaussianBlur(image, (0, 0), sigmaX), -4, 128)
+    image = cv2.addWeighted(image, 4, cv2.GaussianBlur(image, (0, 0), sigmaX), -4, img_width)
     return image
 
 

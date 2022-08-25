@@ -1,68 +1,68 @@
 {
-    "name": "SmallNet",
-    "dataset": "DR",
-    "batch_size": 1,
-    "input_size": 49152,
-    "num_classes": 5,
+    "name": "LeNet",
+    "dataset": "CIFAR10",
+    "batch_size": 128,
+    "input_size": 3072,
+    "num_classes": 10,
     "model": [
         {
             "layer": "cnn",
-            "input_hw": [128, 128],
+            "input_hw": [32, 32],
             "in_channels": 3,
-            "out_channels": 16,
+            "out_channels": 20,
             "filter_hw": [5, 5],
             "stride": 1,
             "padding": 0
         },
         {
             "layer": "maxpool",
-            "input_hw": [124, 124],
-            "in_channels": 16,
+            "input_hw": [28, 28],
+            "in_channels": 20,
             "pool_hw": [2, 2],
             "stride": 2
         },
         {
             "layer": "relu",
-            "input_dim": 16
+            "input_dim": 3920
         },
         {
             "layer": "cnn",
-            "input_hw": [62, 62],
-            "in_channels": 16,
-            "out_channels": 16,
+            "input_hw": [14, 14],
+            "in_channels": 20,
+            "out_channels": 50,
             "filter_hw": [5, 5],
             "stride": 1,
             "padding": 0
         },
         {
             "layer": "maxpool",
-            "input_hw": [58, 58],
-            "in_channels": 16,
+            "input_hw": [10, 10],
+            "in_channels": 50,
             "pool_hw": [2, 2],
             "stride": 2
         },
         {
             "layer": "relu",
-            "input_dim": 16
+            "input_dim": 1250
         },
         {
             "layer": "fc",
-            "input_dim": 13456,
-            "output_dim": 100
+            "input_dim": 1250,
+            "output_dim": 500 
         },
         {
             "layer": "relu",
-            "input_dim": 100
+            "input_dim": 500
         },
         {
             "layer": "fc",
-            "input_dim": 100,
-            "output_dim": 5
+            "input_dim": 500,
+            "output_dim": 10
         },
         {
             "layer": "relu",
-            "input_dim": 5
+            "input_dim": 10
         }
-    ]
+    ] 
 }
 

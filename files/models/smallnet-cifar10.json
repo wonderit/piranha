@@ -1,6 +1,6 @@
 {
     "name": "SmallNet",
-    "dataset": "CIFAR10",
+    "dataset": "DR",
     "batch_size": 32,
     "input_size": 3072,
     "num_classes": 5,

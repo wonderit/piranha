@@ -10,53 +10,88 @@
             "input_hw": [32, 32],
             "in_channels": 3,
             "out_channels": 16,
-            "filter_hw": [5, 5],
+            "filter_hw": [3, 3],
             "stride": 1,
             "padding": 0
+        },
+        {
+            "layer": "relu",
+            "input_dim": 14400
+        },
+        {
+            "layer": "cnn",
+            "input_hw": [30, 30],
+            "in_channels": 16,
+            "out_channels": 32,
+            "filter_hw": [3, 3],
+            "stride": 1,
+            "padding": 0
+        },
+        {
+            "layer": "relu",
+            "input_dim": 25088
         },
         {
             "layer": "maxpool",
             "input_hw": [28, 28],
-            "in_channels": 16,
+            "in_channels": 32,
             "pool_hw": [2, 2],
             "stride": 2
-        },
-        {
-            "layer": "relu",
-            "input_dim": 16
         },
         {
             "layer": "cnn",
             "input_hw": [14, 14],
-            "in_channels": 16,
-            "out_channels": 16,
-            "filter_hw": [5, 5],
+            "in_channels": 32,
+            "out_channels": 32,
+            "filter_hw": [3, 3],
             "stride": 1,
             "padding": 0
         },
         {
-            "layer": "maxpool",
+            "layer": "relu",
+            "input_dim": 4608
+        },
+        {
+            "layer": "cnn",
             "input_hw": [12, 12],
-            "in_channels": 16,
+            "in_channels": 32,
+            "out_channels": 32,
+            "filter_hw": [3, 3],
+            "stride": 1,
+            "padding": 0
+        },
+        {
+            "layer": "relu",
+            "input_dim": 3200
+        },
+        {
+            "layer": "maxpool",
+            "input_hw": [10, 10],
+            "in_channels": 32,
             "pool_hw": [2, 2],
             "stride": 2
         },
         {
-            "layer": "relu",
-            "input_dim": 16
-        },
-        {
             "layer": "fc",
-            "input_dim": 53824,
-            "output_dim": 100
+            "input_dim": 800,
+            "output_dim": 400
         },
         {
             "layer": "relu",
-            "input_dim": 100
+            "input_dim": 400
         },
         {
             "layer": "fc",
-            "input_dim": 100,
+            "input_dim": 400,
+            "output_dim": 200
+        },
+        {
+            "layer": "relu",
+            "input_dim": 200
+        },
+        {
+            "layer": "fc",
+            "input_dim": 200,
             "output_dim": 5
         },
         {

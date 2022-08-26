@@ -27,7 +27,7 @@
     "run_name": "hello_world_run",
 
     "_desc_network": "Path to NN architecture to use for the run",
-    "network": "files/models/secureml-dr.json",
+    "network": "files/models/smallnet-cifar10.json",
 
     "_desc_custom_epochs": "Enable custom number of epochs. Otherwise set by size of learning rate schedule",
     "custom_epochs": true,
@@ -36,13 +36,13 @@
     "custom_epoch_count": 10,
 
     "_desc_custom_iterations": "Enable custom number of iterations. Otherwise set by training dataset size.",
-    "custom_iterations": false,
+    "custom_iterations": true,
 
     "_desc_custom_iteration_count": "Number of iterators to train per epoch, if custom_iterations is set",
-    "custom_iteration_count": 10,
+    "custom_iteration_count": 30,
 
     "_desc_custom_batch_size": "Enable custom batch size. Otherwise set by architecture configuration.",
-    "custom_batch_size": false,
+    "custom_batch_size": true,
 
     "_desc_custom_batch_size_count": "Desired custom batch size",
     "custom_batch_size_count": 32,

@@ -1,9 +1,9 @@
 {
     "name": "LeNet",
-    "dataset": "CIFAR10",
+    "dataset": "DR",
     "batch_size": 128,
     "input_size": 3072,
-    "num_classes": 10,
+    "num_classes": 5,
     "model": [
         {
             "layer": "cnn",
@@ -61,7 +61,7 @@
         },
         {
             "layer": "relu",
-            "input_dim": 10
+            "input_dim": 5
         }
     ] 
 }

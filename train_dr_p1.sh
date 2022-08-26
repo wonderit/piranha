@@ -1,0 +1,1 @@
+nohup ./piranha -p 1 -c config-dr.json > train_dr_p1.log &

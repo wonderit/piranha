@@ -73,7 +73,7 @@
         },
         {
             "layer": "fc",
-            "input_dim": 2048,
+            "input_dim": 8192,
             "output_dim": 1024
         },
         {

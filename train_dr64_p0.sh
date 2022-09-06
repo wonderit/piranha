@@ -1,0 +1,1 @@
+nohup ./piranha -p 0 -c config-dr-64.json > train_dr64_p0.log &

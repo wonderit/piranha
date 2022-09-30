@@ -1,0 +1,1 @@
+nohup ./piranha -p 0 -c config-dr-resnet.json > train_dr_resnet_p0.log &

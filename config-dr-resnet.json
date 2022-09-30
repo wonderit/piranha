@@ -27,13 +27,13 @@
     "run_name": "hello_world_run",
 
     "_desc_network": "Path to NN architecture to use for the run",
-    "network": "files/models/lenet-dr.json",
+    "network": "files/models/resnet18-dr.json",
 
     "_desc_custom_epochs": "Enable custom number of epochs. Otherwise set by size of learning rate schedule",
     "custom_epochs": true,
 
     "_desc_custom_epoch_count": "Number of epochs to train for, if custom_epochs is set",
-    "custom_epoch_count": 10,
+    "custom_epoch_count": 5,
 
     "_desc_custom_iterations": "Enable custom number of iterations. Otherwise set by training dataset size.",
     "custom_iterations": false,
@@ -57,7 +57,7 @@
     "preload_path": "",
 
     "_desc_lr_schedule": "Learning rate schedule, in negative powers of 2 (e.g. 3 -> learning rate of 2^-3). Assumes that the number of LR exponents matches the desired number of training epochs",
-    "lr_schedule": [3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7, 8, 8, 9],
+    "lr_schedule": [3, 4, 6, 8, 10],
 
     "_desc_test_only": "Only run NN test, skip training (useful if weights have been preloaded)",
     "test_only": false,
